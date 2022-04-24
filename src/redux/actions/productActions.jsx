@@ -23,9 +23,9 @@ export function updateProductSuccess(product) {
 }
 
 export function saveProductApi(product) {
-  return fetch("http://localhost:3000/products/" + (product.id || ""), {
+  return fetch("http://localhost:3000/products" + (product.id || ""), {
     method: product.id ? "PUT" : "POST",
-    headers: { "content-type": "application/json" },
+    headers: { "content-type" : "application/json" },
     body: JSON.stringify(product),
   }).then(handleResponse().catch(handleError));
 }
@@ -52,6 +52,6 @@ export async function handleResponse(response){
 }
 
 export function handleError(error){
-  console.error("bir hata oluştur");
+  console.error("bir hata oluştu");
   throw error;
 }

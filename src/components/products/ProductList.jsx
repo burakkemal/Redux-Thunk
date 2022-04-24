@@ -38,7 +38,7 @@ class ProductList extends Component {
                 <td>
                   <Link to={"/saveproduct/" + product.id}>
                     {product.productName}
-                  </Link>{" "}
+                  </Link>
                 </td>
                 <td>{product.unitPrice}</td>
                 <td>{product.quantityPerUnit}</td>
